@@ -13,16 +13,16 @@ class BookingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    private $bookingRepositoryInterface;
+    private $bookingRepository;
 
-    public function __construct(BookingRepositoryInterface $bookingRepositoryInterface)
+    public function __construct(BookingRepositoryInterface $bookingRepository)
     {
-        $this->bookingRepositoryInterface = $bookingRepositoryInterface;
+        $this->bookingRepository = $bookingRepository;
     }
 
     public function index()
     {
-        $bookings  = $this->bookingRepositoryInterface->allBookings();
+        $bookings  = $this->bookingRepository->allBookings();
         // dd($booking);
         return view('booking.index', compact('bookings'));
     }
@@ -54,7 +54,7 @@ class BookingController extends Controller
 
         // echo json_encode($request->all());exit;
         // dd($request->all());
-        $this->bookingRepositoryInterface->storeBookings($data);
+        $this->bookingRepository->storeBookings($data);
 
         return redirect()->route('home')->with('message', 'Booking Created Successfully');
     }
@@ -78,7 +78,7 @@ class BookingController extends Controller
      */
     public function edit($id)
     {
-        $booking = $this->bookingRepositoryInterface->findBooking($id);
+        $booking = $this->bookingRepository->findBooking($id);
 
         return view('booking.update', compact('booking'));
     }
@@ -98,7 +98,7 @@ class BookingController extends Controller
             'start_date' => 'required|date_format:Y-m-d\TH:i',
             'end_date' => 'required|date_format:Y-m-d\TH:i',
         ]);
-        $this->bookingRepositoryInterface->updateBookings($request->all(), $id);
+        $this->bookingRepository->updateBookings($request->all(), $id);
 
         return redirect()->route('home')->with('message', 'Booking Updated Successfully');
     }
