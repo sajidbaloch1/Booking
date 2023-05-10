@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BookingController::class, 'index'])->name('home');
+Route::get('/create', [BookingController::class, 'create'])->name('create');
+Route::post('/store', [BookingController::class, 'store'])->name('store');
+Route::get('/edit/{id}', [BookingController::class, 'edit'])->name('edit');
+Route::put('/update/{id}', [BookingController::class, 'update'])->name('update');
