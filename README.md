@@ -4,6 +4,7 @@
 and then please migrate the table 
 <p>php artisan migrate</p>and then serve 
 this command <p>php artisan serve</p>
+and alse create test and if you check test so run this command     php artisan test
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
