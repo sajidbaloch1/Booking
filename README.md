@@ -1,3 +1,11 @@
+<h1>When you clone this Repository so Run this command</h1>
+<p>composer install</p> if you run this commant so then
+<h1>kindly check the .env file where put the database so you create database like you see the .env file</h1>
+and then please migrate the table 
+<p>php artisan migrate</p>and then serve 
+this command <p>php artisan serve</p>
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
