@@ -23,7 +23,6 @@ class BookingController extends Controller
     public function index()
     {
         $bookings  = $this->bookingRepository->allBookings();
-        // dd($booking);
         return view('booking.index', compact('bookings'));
     }
 
@@ -51,9 +50,6 @@ class BookingController extends Controller
             'start_date' => 'required|date_format:Y-m-d\TH:i',
             'end_date' => 'required|date_format:Y-m-d\TH:i',
         ]);
-
-        // echo json_encode($request->all());exit;
-        // dd($request->all());
         $this->bookingRepository->storeBookings($data);
 
         return redirect()->route('home')->with('message', 'Booking Created Successfully');
