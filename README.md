@@ -1,3 +1,10 @@
+<h1>My thoughts about the code</h1>
+<p>this is a simple code not advance because it's a very simple crud using two methods create and update.
+here has created Repository and controller and created a migration whos name bookings.
+</p>
+<h1>what is good about this code</h1>
+<p>it has created on laravel. laravel is a popular framework php. this code is very well.because laravel is a MVC pattren. here is define Controller , Model , and View  binding to blade.</p>
+
 <h1>When you clone this Repository so Run this command</h1>
 <p>composer install</p> if you run this commant so then
 <h1>kindly check the .env file where put the database so you create database like you see the .env file</h1>
